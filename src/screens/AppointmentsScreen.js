@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import { cancelAppointment } from '../store/slices/appointmentSlice';
+import { COLORS } from '../constants/theme';
 
 export default function AppointmentsScreen({ onNavigateTab }) {
   const dispatch = useDispatch();
@@ -104,7 +105,7 @@ export default function AppointmentsScreen({ onNavigateTab }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f8fafc',
+    backgroundColor: '#fbfbf6',
     paddingHorizontal: 16,
   },
   header: {
@@ -114,11 +115,11 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 22,
     fontWeight: 'bold',
-    color: '#0f172a',
+    color: COLORS.dark,
   },
   subtitle: {
     fontSize: 13,
-    color: '#64748b',
+    color: COLORS.slate500,
     marginTop: 2,
   },
   emptyState: {
@@ -133,24 +134,24 @@ const styles = StyleSheet.create({
   emptyTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#0f172a',
+    color: COLORS.dark,
   },
   emptySubtitle: {
     fontSize: 13,
-    color: '#64748b',
+    color: COLORS.slate500,
     textAlign: 'center',
     marginTop: 6,
     maxWidth: 240,
   },
   browseBtn: {
-    backgroundColor: '#2563eb',
+    backgroundColor: COLORS.primary,
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderRadius: 12,
     marginTop: 18,
   },
   browseBtnText: {
-    color: '#ffffff',
+    color: COLORS.white,
     fontSize: 13,
     fontWeight: 'bold',
   },
@@ -159,11 +160,11 @@ const styles = StyleSheet.create({
     paddingBottom: 24,
   },
   card: {
-    backgroundColor: '#ffffff',
+    backgroundColor: COLORS.white,
     borderRadius: 16,
     padding: 16,
     borderWidth: 1,
-    borderColor: '#e2e8f0',
+    borderColor: COLORS.slate200,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.05,
@@ -186,29 +187,30 @@ const styles = StyleSheet.create({
   doctorName: {
     fontSize: 15,
     fontWeight: 'bold',
-    color: '#0f172a',
+    color: COLORS.dark,
   },
   specialty: {
     fontSize: 12,
-    color: '#2563eb',
+    color: COLORS.primary,
+    fontWeight: '600',
     marginTop: 1,
   },
   dept: {
     fontSize: 11,
-    color: '#64748b',
+    color: COLORS.slate500,
     marginTop: 2,
   },
   badge: {
-    backgroundColor: '#ecfdf5',
+    backgroundColor: COLORS.cream,
     paddingHorizontal: 8,
     paddingVertical: 4,
     borderRadius: 8,
     borderWidth: 1,
-    borderColor: '#a7f3d0',
+    borderColor: '#faecc0',
   },
   badgeText: {
     fontSize: 11,
-    color: '#059669',
+    color: COLORS.primary,
     fontWeight: '700',
   },
   cardBody: {
@@ -225,12 +227,12 @@ const styles = StyleSheet.create({
   },
   label: {
     fontSize: 12,
-    color: '#64748b',
+    color: COLORS.slate500,
   },
   value: {
     fontSize: 12,
     fontWeight: '600',
-    color: '#1e293b',
+    color: COLORS.dark,
   },
   cardFooter: {
     flexDirection: 'row',
@@ -247,18 +249,18 @@ const styles = StyleSheet.create({
   },
   cancelBtnText: {
     fontSize: 12,
-    color: '#dc2626',
+    color: COLORS.accent,
     fontWeight: '600',
   },
   viewBtn: {
     paddingVertical: 6,
     paddingHorizontal: 14,
     borderRadius: 8,
-    backgroundColor: '#2563eb',
+    backgroundColor: COLORS.secondary,
   },
   viewBtnText: {
     fontSize: 12,
-    color: '#ffffff',
+    color: COLORS.white,
     fontWeight: 'bold',
   },
 });

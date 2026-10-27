@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import { setSelectedDepartment } from '../store/slices/hospitalSlice';
+import { COLORS } from '../constants/theme';
 
 export default function HomeScreen({ onSelectDoctor, onNavigateTab }) {
   const dispatch = useDispatch();
@@ -148,7 +149,7 @@ export default function HomeScreen({ onSelectDoctor, onNavigateTab }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f8fafc',
+    backgroundColor: '#fbfbf6',
     paddingHorizontal: 16,
   },
   topBar: {
@@ -161,11 +162,11 @@ const styles = StyleSheet.create({
   greeting: {
     fontSize: 22,
     fontWeight: 'bold',
-    color: '#0f172a',
+    color: COLORS.dark,
   },
   subGreeting: {
     fontSize: 13,
-    color: '#64748b',
+    color: COLORS.slate500,
     marginTop: 2,
   },
   avatar: {
@@ -173,10 +174,10 @@ const styles = StyleSheet.create({
     height: 44,
     borderRadius: 22,
     borderWidth: 2,
-    borderColor: '#3b82f6',
+    borderColor: COLORS.primary,
   },
   emergencyCard: {
-    backgroundColor: '#ef4444',
+    backgroundColor: COLORS.accent,
     borderRadius: 16,
     padding: 16,
     marginBottom: 16,
@@ -184,27 +185,27 @@ const styles = StyleSheet.create({
   emergencyBadge: {
     fontSize: 10,
     fontWeight: 'bold',
-    color: '#fee2e2',
+    color: COLORS.cream,
     letterSpacing: 1,
   },
   emergencyTitle: {
     fontSize: 17,
     fontWeight: 'bold',
-    color: '#ffffff',
+    color: COLORS.white,
     marginTop: 4,
   },
   emergencyNumber: {
     fontSize: 13,
-    color: '#ffffff',
-    fontWeight: '600',
+    color: COLORS.cream,
+    fontWeight: 'bold',
     marginTop: 6,
   },
   appointmentQuickCard: {
-    backgroundColor: '#eff6ff',
+    backgroundColor: COLORS.cream,
     borderRadius: 16,
     padding: 14,
     borderWidth: 1,
-    borderColor: '#bfdbfe',
+    borderColor: '#faecc0',
     marginBottom: 16,
     flexDirection: 'row',
     alignItems: 'center',
@@ -216,28 +217,28 @@ const styles = StyleSheet.create({
   appointmentQuickTitle: {
     fontSize: 11,
     fontWeight: 'bold',
-    color: '#2563eb',
+    color: COLORS.secondary,
     textTransform: 'uppercase',
   },
   appointmentQuickDoctor: {
     fontSize: 14,
     fontWeight: 'bold',
-    color: '#1e293b',
+    color: COLORS.dark,
     marginTop: 2,
   },
   appointmentQuickDate: {
     fontSize: 12,
-    color: '#475569',
+    color: COLORS.slate500,
     marginTop: 2,
   },
   badgeUpcoming: {
-    backgroundColor: '#2563eb',
+    backgroundColor: COLORS.primary,
     paddingHorizontal: 10,
     paddingVertical: 4,
     borderRadius: 12,
   },
   badgeUpcomingText: {
-    color: '#ffffff',
+    color: COLORS.white,
     fontSize: 11,
     fontWeight: 'bold',
   },
@@ -251,11 +252,11 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 17,
     fontWeight: 'bold',
-    color: '#0f172a',
+    color: COLORS.dark,
   },
   seeAll: {
     fontSize: 13,
-    color: '#2563eb',
+    color: COLORS.secondary,
     fontWeight: '600',
   },
   deptScroll: {
@@ -265,35 +266,35 @@ const styles = StyleSheet.create({
     paddingHorizontal: 14,
     paddingVertical: 8,
     borderRadius: 20,
-    backgroundColor: '#ffffff',
+    backgroundColor: COLORS.white,
     borderWidth: 1,
-    borderColor: '#e2e8f0',
+    borderColor: COLORS.slate200,
     marginRight: 8,
   },
   deptChipActive: {
-    backgroundColor: '#2563eb',
-    borderColor: '#2563eb',
+    backgroundColor: COLORS.primary,
+    borderColor: COLORS.primary,
   },
   deptChipText: {
     fontSize: 12,
-    color: '#475569',
+    color: COLORS.dark,
     fontWeight: '600',
   },
   deptChipTextActive: {
-    color: '#ffffff',
+    color: COLORS.white,
   },
   doctorList: {
     gap: 12,
     paddingBottom: 24,
   },
   doctorCard: {
-    backgroundColor: '#ffffff',
+    backgroundColor: COLORS.white,
     borderRadius: 16,
     padding: 14,
     flexDirection: 'row',
     alignItems: 'center',
     borderWidth: 1,
-    borderColor: '#e2e8f0',
+    borderColor: COLORS.slate200,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.05,
@@ -312,11 +313,12 @@ const styles = StyleSheet.create({
   docName: {
     fontSize: 15,
     fontWeight: 'bold',
-    color: '#0f172a',
+    color: COLORS.dark,
   },
   docSpecialty: {
     fontSize: 12,
-    color: '#2563eb',
+    color: COLORS.primary,
+    fontWeight: '600',
     marginTop: 1,
   },
   docMeta: {
@@ -332,21 +334,21 @@ const styles = StyleSheet.create({
   },
   docExp: {
     fontSize: 11,
-    color: '#64748b',
+    color: COLORS.slate500,
   },
   docFee: {
     fontSize: 11,
-    color: '#10b981',
+    color: COLORS.secondary,
     fontWeight: 'bold',
   },
   bookButton: {
-    backgroundColor: '#2563eb',
+    backgroundColor: COLORS.primary,
     paddingVertical: 8,
     paddingHorizontal: 16,
     borderRadius: 10,
   },
   bookButtonText: {
-    color: '#ffffff',
+    color: COLORS.white,
     fontSize: 12,
     fontWeight: 'bold',
   },

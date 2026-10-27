@@ -1,0 +1,15 @@
+export const COLORS = {
+  primary: '#008A3D',
+  primaryHover: '#007333',
+  secondary: '#085CA8',
+  secondaryHover: '#074b88',
+  accent: '#E50914',
+  accentHover: '#c40811',
+  cream: '#FFFDD0',
+  dark: '#111827',
+  white: '#ffffff',
+  slate50: '#f8fafc',
+  slate200: '#e2e8f0',
+  slate400: '#94a3b8',
+  slate500: '#64748b',
+};

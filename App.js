@@ -15,6 +15,7 @@ import HomeScreen from './src/screens/HomeScreen';
 import DoctorsScreen from './src/screens/DoctorsScreen';
 import AppointmentsScreen from './src/screens/AppointmentsScreen';
 import BookingModal from './src/components/BookingModal';
+import { COLORS } from './src/constants/theme';
 
 function MainNavigator() {
   const [activeTab, setActiveTab] = useState('home');
@@ -106,18 +107,18 @@ export default function App() {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: '#ffffff',
+    backgroundColor: COLORS.white,
     paddingTop: Platform.OS === 'android' ? RNStatusBar.currentHeight : 0,
   },
   content: {
     flex: 1,
-    backgroundColor: '#f8fafc',
+    backgroundColor: '#fbfbf6',
   },
   tabBar: {
     flexDirection: 'row',
-    backgroundColor: '#ffffff',
+    backgroundColor: COLORS.white,
     borderTopWidth: 1,
-    borderColor: '#e2e8f0',
+    borderColor: COLORS.slate200,
     paddingVertical: 10,
     paddingBottom: Platform.OS === 'ios' ? 24 : 10,
     elevation: 8,
@@ -141,11 +142,11 @@ const styles = StyleSheet.create({
   },
   tabLabel: {
     fontSize: 11,
-    color: '#64748b',
+    color: COLORS.slate500,
     fontWeight: '500',
   },
   tabActiveLabel: {
-    color: '#2563eb',
+    color: COLORS.primary,
     fontWeight: 'bold',
   },
 });

@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import { setSelectedDepartment } from '../store/slices/hospitalSlice';
+import { COLORS } from '../constants/theme';
 
 export default function DoctorsScreen({ onSelectDoctor }) {
   const dispatch = useDispatch();
@@ -81,7 +82,7 @@ export default function DoctorsScreen({ onSelectDoctor }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f8fafc',
+    backgroundColor: '#fbfbf6',
     paddingHorizontal: 16,
   },
   header: {
@@ -91,11 +92,11 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 22,
     fontWeight: 'bold',
-    color: '#0f172a',
+    color: COLORS.dark,
   },
   subtitle: {
     fontSize: 13,
-    color: '#64748b',
+    color: COLORS.slate500,
     marginTop: 2,
   },
   tabsScroll: {
@@ -105,33 +106,33 @@ const styles = StyleSheet.create({
     paddingHorizontal: 14,
     paddingVertical: 7,
     borderRadius: 20,
-    backgroundColor: '#ffffff',
+    backgroundColor: COLORS.white,
     borderWidth: 1,
-    borderColor: '#e2e8f0',
+    borderColor: COLORS.slate200,
     marginRight: 8,
   },
   tabActive: {
-    backgroundColor: '#2563eb',
-    borderColor: '#2563eb',
+    backgroundColor: COLORS.primary,
+    borderColor: COLORS.primary,
   },
   tabText: {
     fontSize: 12,
-    color: '#64748b',
+    color: COLORS.dark,
     fontWeight: '600',
   },
   tabTextActive: {
-    color: '#ffffff',
+    color: COLORS.white,
   },
   list: {
     gap: 12,
     paddingBottom: 24,
   },
   card: {
-    backgroundColor: '#ffffff',
+    backgroundColor: COLORS.white,
     borderRadius: 16,
     padding: 16,
     borderWidth: 1,
-    borderColor: '#e2e8f0',
+    borderColor: COLORS.slate200,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.05,
@@ -150,17 +151,17 @@ const styles = StyleSheet.create({
   name: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: '#0f172a',
+    color: COLORS.dark,
   },
   specialty: {
     fontSize: 13,
-    color: '#2563eb',
+    color: COLORS.primary,
     marginTop: 2,
-    fontWeight: '500',
+    fontWeight: '600',
   },
   department: {
     fontSize: 12,
-    color: '#64748b',
+    color: COLORS.slate500,
     marginTop: 4,
   },
   statsRow: {
@@ -175,25 +176,25 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   dot: {
-    color: '#cbd5e1',
+    color: COLORS.slate200,
   },
   exp: {
     fontSize: 12,
-    color: '#64748b',
+    color: COLORS.slate500,
   },
   fee: {
     fontSize: 12,
-    color: '#10b981',
+    color: COLORS.secondary,
     fontWeight: 'bold',
   },
   bookBtn: {
-    backgroundColor: '#2563eb',
+    backgroundColor: COLORS.primary,
     paddingVertical: 10,
     borderRadius: 10,
     alignItems: 'center',
   },
   bookBtnText: {
-    color: '#ffffff',
+    color: COLORS.white,
     fontSize: 13,
     fontWeight: 'bold',
   },
